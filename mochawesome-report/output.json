@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-09-21T12:41:14.986Z",
+    "end": "2025-09-21T12:41:24.566Z",
+    "duration": 9580
+  },
+  "results": [
+    {
+      "uuid": "219daf90-7bf6-4f48-b3a5-753be396e810",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/login.cy.js",
+      "file": "cypress/e2e/smoke/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "957ea8bc-31ef-4152-b1a7-76f738016667",
+          "title": "Different user login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfully login with standard user",
+              "fullTitle": "Different user login Should successfully login with standard user",
+              "timedOut": null,
+              "duration": 876,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(this.userData.standard_user.username, this.userData.standard_user.password);\ncy.url().should('include', 'inventory');",
+              "err": {},
+              "uuid": "8eca7450-9233-46e9-a39b-9daf9b22dc72",
+              "parentUUID": "957ea8bc-31ef-4152-b1a7-76f738016667",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should get error for locked out user",
+              "fullTitle": "Different user login Should get error for locked out user",
+              "timedOut": null,
+              "duration": 840,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(this.userData.locked_out_user.username, this.userData.locked_out_user.password);\ncy.url().should('not.contain', 'inventory');\n_loginPage.default.getErrorMessage().should('contain', 'Sorry, this user has been locked out.');",
+              "err": {},
+              "uuid": "c830e178-542b-4115-a30b-22bcc9b1702b",
+              "parentUUID": "957ea8bc-31ef-4152-b1a7-76f738016667",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should login with delay for performance_glitch_user",
+              "fullTitle": "Different user login Should login with delay for performance_glitch_user",
+              "timedOut": null,
+              "duration": 5818,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var start = Date.now();\n_loginPage.default.login(this.userData.performance_glitch_user.username, this.userData.performance_glitch_user.password);\ncy.url().should('contain', 'inventory').then(() => {\n  var duration = Date.now() - start;\n  cy.log(`Page load took ${duration} ms`);\n  expect(duration).to.be.greaterThan(5000);\n});",
+              "err": {},
+              "uuid": "8f094bf2-49c8-495b-a32d-c35e86e9db13",
+              "parentUUID": "957ea8bc-31ef-4152-b1a7-76f738016667",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should successfully login with problem_user",
+              "fullTitle": "Different user login Should successfully login with problem_user",
+              "timedOut": null,
+              "duration": 655,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(this.userData.problem_user.username, this.userData.problem_user.password);\ncy.url().should('include', 'inventory');",
+              "err": {},
+              "uuid": "48549048-2323-48c8-893d-1d892363676f",
+              "parentUUID": "957ea8bc-31ef-4152-b1a7-76f738016667",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should successfully login with error_user",
+              "fullTitle": "Different user login Should successfully login with error_user",
+              "timedOut": null,
+              "duration": 639,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(this.userData.error_user.username, this.userData.error_user.password);\ncy.url().should('include', 'inventory');",
+              "err": {},
+              "uuid": "2356a993-4df7-4908-abd4-ef05404be7e7",
+              "parentUUID": "957ea8bc-31ef-4152-b1a7-76f738016667",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should successfully login with visual user",
+              "fullTitle": "Different user login Should successfully login with visual user",
+              "timedOut": null,
+              "duration": 640,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(this.userData.visual_user.username, this.userData.visual_user.password);\ncy.url().should('include', 'inventory');",
+              "err": {},
+              "uuid": "a68820fa-c329-4af2-93e5-b77c1d99bf7d",
+              "parentUUID": "957ea8bc-31ef-4152-b1a7-76f738016667",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8eca7450-9233-46e9-a39b-9daf9b22dc72",
+            "c830e178-542b-4115-a30b-22bcc9b1702b",
+            "8f094bf2-49c8-495b-a32d-c35e86e9db13",
+            "48549048-2323-48c8-893d-1d892363676f",
+            "2356a993-4df7-4908-abd4-ef05404be7e7",
+            "a68820fa-c329-4af2-93e5-b77c1d99bf7d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9468,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.0"
+    }
+  }
+}
