@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-21T12:45:52.061Z",
+    "end": "2025-09-21T12:45:55.073Z",
+    "duration": 3012,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "599fee4b-e8ad-43ca-8ab3-322e9d95dd9b",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/checkout.cy.js",
+      "file": "cypress/e2e/smoke/checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc4722a3-fe85-459b-9497-1a89b1fc8b65",
+          "title": "Add item to cart flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add the first item to cart",
+              "fullTitle": "Add item to cart flow Add the first item to cart",
+              "timedOut": null,
+              "duration": 1179,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.visit();\n_loginPage.default.login(this.userData.standard_user.username, this.userData.standard_user.password);\n_inventoryPage.default.addByIndex(0);\n_inventoryPage.default.getCartCount().should('contain.text', 1);",
+              "err": {},
+              "uuid": "119248ad-d453-443c-9b80-63c05284cf7c",
+              "parentUUID": "dc4722a3-fe85-459b-9497-1a89b1fc8b65",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add item and checkout flow",
+              "fullTitle": "Add item to cart flow Add item and checkout flow",
+              "timedOut": null,
+              "duration": 1790,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.visit();\n_loginPage.default.login(this.userData.standard_user.username, this.userData.standard_user.password);\n_inventoryPage.default.addByIndex(0);\n_inventoryPage.default.getCartCount().should('contain.text', 1);\n_inventoryPage.default.clickOnCart();\n_cartPage.default.clickOnCheckout();\n_checkoutPage.default.fillForm('Akash', 'Jayaraj', '560103');\n_checkoutPage.default.clickContinue();\n_checkoutPage.default.clickFinish();\ncy.contains('Thank you');",
+              "err": {},
+              "uuid": "3fb06ec2-f7b4-43f4-86b1-23706c70d414",
+              "parentUUID": "dc4722a3-fe85-459b-9497-1a89b1fc8b65",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "119248ad-d453-443c-9b80-63c05284cf7c",
+            "3fb06ec2-f7b4-43f4-86b1-23706c70d414"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2969,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.0"
+    }
+  }
+}

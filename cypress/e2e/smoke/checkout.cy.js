@@ -30,4 +30,16 @@ describe('Add item to cart flow', () => {
 
         cy.contains('Thank you')
     })
+
+    it('Add and remove item from cart', function() {
+        loginPage.visit();
+        loginPage.login(this.userData.standard_user.username, this.userData.standard_user.password);
+        inventoryPage.addByIndex(0);
+        inventoryPage.getCartCount().should('contain.text', 1);
+        inventoryPage.clickOnCart();
+
+        cartPage.removeItemByindex(0);
+        cy.getByDataTestId(cartPage.cartitem).should('have.length', 0);
+    })
+
 })
