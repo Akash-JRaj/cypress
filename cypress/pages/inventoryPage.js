@@ -1,6 +1,7 @@
 class Inventorypage {
     inventoryList = '[data-test="inventory-item"]'
     inventoryItem = "inventory-item"
+    productSortContainer = 'product-sort-container'
     shoppingCartBadge = "shopping-cart-badge"
     cart = 'shopping-cart-link'
 
